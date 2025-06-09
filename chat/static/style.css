@@ -1,0 +1,61 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#chatBox {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+#chatOutput p {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#chatOutput p:nth-child(odd) {
+    background-color: #e6f2ff;
+    text-align: left;
+}
+
+#chatOutput p:nth-child(even) {
+    background-color: #d1ffe2;
+    text-align: right;
+}
+
+input#userInput {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

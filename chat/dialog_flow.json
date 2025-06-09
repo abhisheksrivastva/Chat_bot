@@ -1,0 +1,27 @@
+{
+  "greeting": {
+    "patterns": ["hi", "hello", "hey"],
+    "responses": ["Hello! How can I help you today?", "Hi there! What's on your mind?"]
+  },
+  "feeling_low": {
+    "patterns": ["i feel low", "i'm sad", "feeling down"],
+    "responses": ["I'm really sorry you're feeling low. Want to share more, or should I suggest something to cheer you up?"],
+    "follow_up": {
+      "patterns": ["yes", "sure", "okay"],
+      "responses": ["Talking helps sometimes. What's been going on? Or I can suggest a fun activity!"],
+      "suggestions": ["How about listening to your favorite music or taking a short walk?"]
+    }
+  },
+  "what_to_do": {
+    "patterns": ["what should i do", "what can i do", "help me decide"],
+    "responses": ["Let's find something great! Want something fun, productive, or relaxing?"],
+    "follow_up": {
+      "fun": ["Try playing a game or watching a comedy movie!"],
+      "productive": ["How about organizing your desk or learning a new skill online?"],
+      "relaxing": ["A warm bath or some deep breathing exercises could be perfect!"]
+    }
+  },
+  "default": {
+    "responses": ["Hmm, I'm not sure what you mean. Try saying something like 'I feel low' or 'What should I do?'"]
+  }
+}

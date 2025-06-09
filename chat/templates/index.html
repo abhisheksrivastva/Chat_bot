@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion-Based Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Emotion-Based Chatbot 🤖</h1>
+    <div id="chatBox">
+        <div id="chatOutput"></div>
+    </div>
+    <div>
+        <input id="userInput" type="text" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script>
+        let currentState = null;
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            if (!userInput.trim()) return;
+
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({message: userInput, state: currentState})
+            });
+
+            const data = await response.json();
+            currentState = data.state;
+
+            const output = document.getElementById('chatOutput');
+            output.innerHTML += `<p><b>You:</b> ${userInput}</p><p><b>Bot:</b> ${data.response}</p>`;
+            output.scrollTop = output.scrollHeight;
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+</body>
+</html>
